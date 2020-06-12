@@ -9,10 +9,11 @@ public class PlayerController : MonoBehaviour
 
     private float timeSinceLastFire = 0f;
     public float playerSpeed = 0.1f;
+    public GameObject Reset;
     // Start is called before the first frame update
     void Start()
     {
-
+        Reset.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+            Reset.gameObject.SetActive(true);
     }
 }
 
